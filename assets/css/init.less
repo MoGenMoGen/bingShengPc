@@ -1,0 +1,77 @@
+@themeColor :#2778BE;
+@borderColor: #DFDFDF;  /*边框颜色*/
+@lineColor:#D1D1D1;  /*线条颜色*/
+@lineColorLang:#E1E6F0; /*长线条颜色*/
+@fontColor:#595757; /*字体颜色*/
+@redColor:#FF3535;/*红色*/
+
+
+html,body{
+  color: @fontColor;
+}
+.el-select-dropdown__wrap{
+  margin-bottom: 0!important;
+}
+.el-loading-mask {
+  position: fixed;
+}
+.red{
+  color: @redColor;
+}
+.cursor{
+  cursor: pointer;
+}
+.cursor:hover{
+  color: @themeColor;
+  text-decoration: underline;
+}
+.main{
+  //min-width: 1200px;
+  margin: 0 auto;
+}
+
+.iconfont{
+  font-family:"iconfont";
+  font-size:16px;
+  font-style:normal;
+  vertical-align: middle;
+}
+/*加阴影*/
+.bgShadow{
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.08);
+}
+
+/*变大*/
+.toScale{
+  animation:mymove 0.5s;
+  -webkit-animation:mymove 0.5s ; /* Safari 和 Chrome */
+  transform:scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+@keyframes mymove
+{
+  from {transform:scale(1);}
+  to {transform:scale(1.1);}
+}
+
+@-moz-keyframes mymove /* Firefox */
+{
+  from {transform:scale(1);}
+  to {transform:scale(1.1);}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+  from {transform:scale(1);}
+  to {transform:scale(1.1);}
+}
+
+@-o-keyframes mymove /* Opera */
+{
+  from {transform:scale(1);}
+  to {transform:scale(1.1);}
+}
+
