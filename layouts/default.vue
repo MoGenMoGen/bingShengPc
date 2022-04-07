@@ -2,8 +2,13 @@
   <div id="default" :style="{width:bWidth?bWidth+'px':'100%'}" v-loading="loading"  ref="scroll">
     <!--右边的悬浮菜单-->
     <!--<top v-show="topShow"></top>-->
-    <my-menu v-show="headerShow" @toTop="toTop"></my-menu>
-    <my-header v-show="headerShow"></my-header>
+ 
+      <div class="headercontent">
+        <my-header v-show="headerShow"></my-header>
+        <my-menu v-show="headerShow" @toTop="toTop"></my-menu>
+      </div>
+  
+   
       <div class="container">
         <div id="defaultScroll">
           <nuxt />
@@ -368,6 +373,13 @@
   }
 </script>
 <style lang="less">
+  
+  .headercontent{
+       background: rgba(0, 0, 0, 0);
+        position: fixed;
+        top: 0;
+        width: 100%;
+  }
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

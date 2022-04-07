@@ -34,7 +34,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: '新材料船舶综合服务平台',
+    title: '秉圣工业',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

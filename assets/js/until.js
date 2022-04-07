@@ -32,8 +32,8 @@ class until {
     let width = 0
     let bWidth = 0
     let widths = document.documentElement.clientWidth ||  document.body.clientWidth;
-    bWidth = widths>1200 ? widths : 1200
-    width = bWidth*0.9>1200 ? 1200 : bWidth*0.9
+    bWidth = widths>1600 ? widths : 1600
+    width = bWidth*0.9>1600 ? 1600 : bWidth*0.9
 
     // if (widths < 1000) {
     //

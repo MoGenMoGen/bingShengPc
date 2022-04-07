@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     token:'',
     ifLogin:false,
     bWidth:1920,
-    width:1200,
+    width:1600,
     loading:false,//加载动画，数据加载使用，提交时使用
     cartNum:0,
     proSize:1,//产品图比例

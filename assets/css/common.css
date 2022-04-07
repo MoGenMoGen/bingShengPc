@@ -24,7 +24,13 @@ body,button,input,select,textarea{
     font: 14px/19px "Microsoft YaHei", "lucida grande", "lucida sans unicode", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei",Arial, Helvetica, sans-serif;
 }
 
-
+.main{
+    width: 100%;
+}
+.warp{
+    /* width: 1600px; */
+    margin: 0 auto
+  }
 /*nuxt*/
 #__nuxt,#__layout{
   height: 100%;
@@ -41,6 +47,7 @@ body,html{
 	padding: 0;
 	margin: 0;
     height: 100%;
+    font-family: "Microsoft YaHei", Arial;
     /*filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/
     /*-webkit-filter: grayscale(100%); !* Chrome, Safari, Opera *!*/
     /*filter: grayscale(100%);*/

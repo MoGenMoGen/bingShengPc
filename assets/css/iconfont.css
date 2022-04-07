@@ -7,6 +7,16 @@
   url('//at.alicdn.com/t/font_1866130_egcz07gaid5.svg?t=1593499527933#iconfont') format('svg'); /* iOS 4.1- */
 }
 
+@font-face {
+  font-family: "iconfont"; /* Project id 3309444 */
+  src: url('//at.alicdn.com/t/font_3309444_vclykearf6o.woff2?t=1649314226659') format('woff2'),
+       url('//at.alicdn.com/t/font_3309444_vclykearf6o.woff?t=1649314226659') format('woff'),
+       url('//at.alicdn.com/t/font_3309444_vclykearf6o.ttf?t=1649314226659') format('truetype');
+}
+.icon-sousuo:before {
+  content: "\e606";
+}
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
