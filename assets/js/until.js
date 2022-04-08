@@ -40,12 +40,12 @@ class until {
     //   width = 1000*0.9;
     //   bWidth = 1000;
     // }
-    // if (widths >= 1000 && widths <= 1200) {
+    // if (widths >= 1000 && widths <= 1600) {
     //   width = widths*0.9;
     //   bWidth = widths;
     // }
-    // if (widths > 1200) {
-    //   width = 1200;
+    // if (widths > 1600) {
+    //   width = 1600;
     //   bWidth = widths;
     // }
     return{width,bWidth}
