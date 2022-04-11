@@ -2,8 +2,8 @@
   <div id="default" :style="{width:bWidth?bWidth+'px':'100%'}" v-loading="loading"  ref="scroll">
     <!--右边的悬浮菜单-->
     <!--<top v-show="topShow"></top>-->
- 
-      <div class="headercontent">
+
+      <div :class="{headercontent,active}" @scroll="handleScroll">
         <my-header v-show="headerShow"></my-header>
         <my-menu v-show="headerShow" @toTop="toTop"></my-menu>
       </div>
@@ -28,6 +28,8 @@
       return{
         bWidth:0,
         width:0,
+        headercontent:true,
+        active:false,
         headerShow:true,
         topShow:true,
         footerShow:true,
@@ -105,6 +107,9 @@
     created(){
     },
     mounted(){
+      // 页面滚动监听事件
+      window.addEventListener('scroll', this.handleScroll)
+
       if(this.until.getQueryString('inviCd')){ //有邀请码
         this.until.seSave('inviCd',this.until.getQueryString('inviCd'))
       }
@@ -119,7 +124,17 @@
         this.changeDevice()
       }
     },
+   
     methods:{
+      handleScroll () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        // var offsetTop = document.querySelector('#searchBar').offsetTop
+        if (scrollTop > 120) {
+          this.active = true
+        } else {
+          this.active = false
+        }
+      },
       //切换设备
       changeDevice() {
         // console.log("=========== "+window.location.pathname+" ===========" )
@@ -374,12 +389,18 @@
 </script>
 <style lang="less">
   
-  .headercontent{
-       background: rgba(0, 0, 0, 0);
-        position: fixed;
-        top: 0;
-        width: 100%;
-  }
+.headercontent{
+      background: rgba(0, 0, 0, 0);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding-bottom: 30px;
+      z-index: 99999;
+}
+.headercontent.active{
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 5px 0 16px rgba(255,255,255,0.4);
+}
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -404,8 +425,8 @@ html {
     /*display: flex;*/
     /*display: -webkit-flex;*/
     /*flex-direction: column;*/
-    .container{
-      /*flex: 1;*/
-    }
+    // .container{
+    //   flex: 1;
+    // }
   }
 </style>

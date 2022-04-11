@@ -2,23 +2,14 @@
   <div id="footer" :style="{width:bWidth+'px'}">
       <div class="menu main" :style="{width:width+'px'}">
           <ul>
-             <li v-for="(item,index) in menuList" :key="index">
+             <li v-for="(item,index) in footerList" :key="index">
                <b>{{item.nm}}</b>
-               <span v-for="(v,i) in item.list" :key="i" @click="toPage(v)">{{v.nm}}</span>
+               <span v-for="(v,i) in item.list" :key="i">{{v.nm}} </span>
              </li>
           </ul>
-          <div class="ma">
-            <p v-for="(item,index) in qrList" :key="index" @click="toPage2(item.locUrl)">
-              <img :src="item.imgUrl"/>
-              <span>{{item.nm}}</span>
-            </p>
-          </div>
       </div>
       <div class="bottom main" :style="{width:width+'px'}">
-        <p style="font-size: 12px">  Copyright © 国家渔业装备科技创新联盟版权所有&nbsp;&nbsp;&nbsp;
-        <a style="color: #999999" href="https://sinovat.oss-cn-shanghai.aliyuncs.com/c92cd8ddd30f4803b7ecb24e53b9604a_ICPEDI%E8%AF%81%E4%B9%A6.pdf" target="_blank" class="cursor">增值电信业务经营许可证：浙B2-20210502</a>&nbsp;&nbsp;&nbsp;
-        <a style="color: #999999" href="https://beian.miit.gov.cn" target="_blank" class="cursor">浙ICP备20025027号-7</a> </p>
-        <p style="font-size: 12px">聚联科技有限公司技术支持</p>
+        <p style="font-size: 12px"> © 2022 宁波秉圣工业技术有限公司 版权所有</p>
       </div>
   </div>
 </template>
@@ -28,8 +19,32 @@
     props:[],
     data(){
       return{
-        menuList:[],
-        qrList:[]
+        footerList:[
+          {nm:"秉圣工业",
+          list:[
+            {nm:"所有产品"},
+            {nm:"解决方案"},
+            {nm:"免费注册"},
+          ]},
+          {nm:"关于我们",
+          list:[
+            {nm:"公司介绍"},
+            {nm:"成功案例"},
+            {nm:"公司地址"},
+          ]},
+          {nm:"解决方案",
+          list:[
+            {nm:"碳中和"},
+            {nm:"港口港机"},
+            {nm:"汽车行业"},
+          ]},
+          {nm:"联系我们",
+          list:[
+            {nm:"在线留言"},
+            {nm:"关注我们"},
+            {nm:"0574-00008888"},
+          ]},
+        ]
       }
     },
     components: {
@@ -89,16 +104,14 @@
   @import url("../assets/css/init.less");
   #footer{
     border-top: 1px solid #E7E7E7;
-    background: #ffffff;
+    background: rgba(43, 43, 43, 1);
     .menu{
       overflow: hidden;
-      border-bottom: 1px solid #E7E7E7;
-      padding-top: 30px;
-      padding-bottom: 25px;
-      display: flex;
-      align-items: center;
+      padding-top: 38px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(247, 247, 250, 0.1);
        ul{
-          padding-left: 80px;
+         padding-left: 80px;
          flex: 1;
          display: flex;
          display: -webkit-flex;
@@ -107,20 +120,21 @@
            display: inline-block;
            // flex: 1;
            b{
-             font-size: 16px;
+             font-size: 18px;
              display: block;
              padding-bottom: 15px;
+             color: #fff;
            }
            span{
              // width: auto;
              display: block;
              cursor: pointer;
-             font-size: 12px;
+             font-size: 14px;
              line-height: 26px;
-             color: #999999;
+             color: rgba(255, 255, 255, 0.6);
            }
            span:hover{
-             color: @themeColor;
+             color: #11A2DE;
            }
          }
        }
@@ -149,7 +163,7 @@
       text-align: center;
       font-size: 14px;
       color: #999999;
-      padding: 10px 0;
+      padding: 25px 0;
       line-height: 28px;
     }
   }
