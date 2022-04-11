@@ -129,10 +129,11 @@ export default {
            background-color: rgba(255, 255, 255, 0.3);
            border-top-left-radius: 9999px;
            border-bottom-left-radius: 9999px;
-           width: 71px;
+           width: 75px;
            height: 40px;
            color: #fff;
            border: none;
+           padding-right: 0;
          }
        }
         

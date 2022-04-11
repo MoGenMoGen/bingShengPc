@@ -395,7 +395,7 @@
       top: 0;
       width: 100%;
       padding-bottom: 30px;
-      z-index: 99999;
+      z-index: 2000;
 }
 .headercontent.active{
   background: rgba(0, 0, 0, 0.85);
@@ -422,12 +422,10 @@ html {
 }
   #default{
     min-height: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     /*display: flex;*/
     /*display: -webkit-flex;*/
     /*flex-direction: column;*/
-    // .container{
-    //   flex: 1;
-    // }
+   
   }
 </style>

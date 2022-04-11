@@ -381,13 +381,12 @@
                   </div>
                   <div class="time">
                     <span>{{ item.time }}</span>
-                    <div
-                      class="read"
-                      @mouseover="flag21 = true"
-                      @mouseleave="flag21 = false"
+                    <div class="read"
+                    @mouseover="currentIndex6=index"
+                    @mouseleave="currentIndex6=-1"
                     >
-                      <span v-show="!flag21">{{ item.read }}</span>
-                      <span v-show="flag21">{{ item.read }}></span>
+                      <span v-show="currentIndex6!=index">{{ item.read }}</span>
+                      <span v-show="currentIndex6==index">{{ item.read }}></span>
                     </div>
                   </div>
                 </li>
@@ -478,7 +477,6 @@
     <div class="bg7" :style="{ width: bWidth + 'px' }">
       <div class="content7" :style="{ width: width + 'px' }">
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -505,6 +503,7 @@ export default {
       flag4: false,
       currentIndex41: 0, //显示详情
       currentIndex42: -1, //显示按钮选中
+      currentIndex6:-1, //显示详情按钮选中
       flag5: false,
       flag6: false,
       //模块二列表
@@ -1339,11 +1338,11 @@ export default {
               }
             }
 
-            &:hover {
-              dt {
+            &{
+              dt:hover {
                 color: #05ad49;
               }
-              img {
+              img:hover {
                 transform: scale(1.1);
               }
             }
@@ -1456,7 +1455,7 @@ export default {
     .content7 {
       margin: 0 auto;
       position: relative;
-      top: 300px;
+      // top: 300px;
       height: 100%;
     }
   }
