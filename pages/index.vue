@@ -118,7 +118,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>源网荷储一体化</p>
             </div>
           </div>
 
@@ -126,7 +126,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>热电效能</p>
             </div>
           </div>
 
@@ -134,7 +134,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>医疗器械</p>
             </div>
           </div>
 
@@ -142,7 +142,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>智慧城市</p>
             </div>
           </div>
 
@@ -150,7 +150,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>零碳地产</p>
             </div>
           </div>
 
@@ -158,7 +158,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>智慧水务</p>
             </div>
           </div>
 
@@ -166,14 +166,14 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>智慧港口</p>
             </div>
           </div>
           <div class="circle1 f7">
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>化工双碳</p>
             </div>
           </div>
 
@@ -181,7 +181,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>钢铁双碳</p>
             </div>
           </div>
 
@@ -189,7 +189,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>水泥双碳</p>
             </div>
           </div>
 
@@ -197,7 +197,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>零碳学校</p>
             </div>
           </div>
 
@@ -205,7 +205,7 @@
             <div class="big-circle"></div>
             <div class="small-circle"></div>
             <div class="hidde">
-              <p>园区荷储一体化</p>
+              <p>智能制造</p>
             </div>
           </div>
         </div>
