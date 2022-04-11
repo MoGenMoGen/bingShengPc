@@ -422,6 +422,7 @@ html {
 }
   #default{
     min-height: 100%;
+    // overflow: hidden;
     /*display: flex;*/
     /*display: -webkit-flex;*/
     /*flex-direction: column;*/

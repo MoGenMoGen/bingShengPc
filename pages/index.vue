@@ -240,14 +240,18 @@
             <div class="productSwiper point" @mouseover="handleover4(index)">
               <img :src="item.pic" alt="" />
               <div class="mask"></div>
-              <div class="showbox1" v-if="currentIndex41 != index">
+              <div class="showbox1"
+                :style="{
+                opacity:  currentIndex41 != index?1:0
+                }"
+              >
                 <div class="title">{{ item.title }}</div>
                 <div class="entitle">{{ item.enTitle }}</div>
               </div>
               <div
                 class="showbox2"
                 :style="{
-                  width: currentIndex41 == index ? '491px' : '0px',
+                  width: currentIndex41 == index ? '491px' : '331px',
                   height: currentIndex41 == index ? '50%' : '0%',
                   padding: currentIndex41 == index ? '25px 36px' : '0px',
                 }"
@@ -634,7 +638,7 @@ export default {
       // 部分品牌展示
       swiperOption6: {
         slidesPerView: 3,
-        spaceBetween: 35,
+        spaceBetween: 10,
         freeMode: true,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -796,7 +800,7 @@ export default {
         padding: 0 25px;
         padding-top: 20px;
         box-sizing: border-box;
-        height:305px;
+        height: 305px;
         .swiper-slide {
           // margin: 0 2% !important;
           width: 25% !important;
@@ -1103,6 +1107,7 @@ export default {
           width: 331px !important;
           transition: width 0.5s;
         }
+
         .swiper-slide {
           // margin: 0 2% !important;
           width: 331px;
@@ -1131,6 +1136,7 @@ export default {
             .showbox1 {
               position: absolute;
               z-index: 200;
+              transition: opacity 0.5s;
               .title {
                 font-size: 36px;
                 font-weight: bold;
@@ -1157,7 +1163,7 @@ export default {
               border-bottom-right-radius: 20px;
               border-bottom-left-radius: 20px;
               padding: 25px 36px;
-              transition: all 0.5s;
+              transition: all 0.5s ease;
               .title {
                 font-size: 36px;
                 font-weight: bold;
@@ -1393,18 +1399,34 @@ export default {
         margin-top: 20px;
         .qlog {
           margin-top: 80px;
-          padding: 0 30px 190px 30px;
-          .swiper-button-prev.swiper-button-white,
-          .swiper-container-rtl .swiper-button-next.swiper-button-white {
-            background-image: none;
-          }
-          .swiper-button-next.swiper-button-white,
-          .swiper-container-rtl .swiper-button-prev.swiper-button-white {
-            background-image: none;
-          }
-          .point {
-            margin-left: 85px;
-            margin-right: 85px;
+          padding-bottom: 190px;
+          // padding: 0 30px 190px 30px;
+          .swiper {
+            width: calc(~"100% - 60px");
+            height: 125px;
+            // padding: 0 30px;
+            // box-sizing: border-box;
+            .swiper-slide {
+              // margin: 0 2% !important;
+              width: 33.3% !important;
+              height: 100%;
+              .point {
+                margin-left: 85px;
+                margin-right: 85px;
+              }
+            }
+
+            .swiperBtn {
+              background: none;
+              width: 25px;
+              top: 66px;
+            }
+            // .swiper-button-prev {
+            //   left: 30px !important;
+            // }
+            // .swiper-button-next {
+            //   right: 30px !important;
+            // }
           }
         }
       }
