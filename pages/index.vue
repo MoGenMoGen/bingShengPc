@@ -276,14 +276,14 @@
             style="left: 0"
             slot="button-prev"
           >
-            <img src="@/assets/img/icon/l_left.png" alt="" />
+            <img src="@/assets/img/icon/b_left.png" alt="" />
           </div>
           <div
             class="swiper-button-next swiper-button-white swiperBtn"
             style="right: 0"
             slot="button-next"
           >
-            <img src="@/assets/img/icon/l_right.png" alt="" />
+            <img src="@/assets/img/icon/b_right.png" alt="" />
           </div>
           <!-- </div> -->
           <!-- <div class="swiper-pagination grayColor" slot="pagination"></div> -->
@@ -458,14 +458,14 @@
                 style="left: 0"
                 slot="button-prev"
               >
-                <img src="@/assets/img/icon/l_left.png" alt="" />
+                <img src="@/assets/img/icon/b_left.png" alt="" />
               </div>
               <div
                 class="swiper-button-next swiper-button-white swiperBtn"
                 style="right: 0"
                 slot="button-next"
               >
-                <img src="@/assets/img/icon/l_right.png" alt="" />
+                <img src="@/assets/img/icon/b_right.png" alt="" />
               </div>
               <!-- </div> -->
               <!-- <div class="swiper-pagination grayColor" slot="pagination"></div> -->
@@ -653,7 +653,10 @@ export default {
     };
   },
   computed: {
-    ...mapState(["bWidth", "width", "proSize"]),
+    ...mapState({
+       bWidth: (state) => state.cart.bWidth, //此处注意需要区分模块(cart)，不能少 .cart.
+      width: (state) => state.cart.width,
+    }),
   },
   methods: {
     handleover4(index) {
