@@ -40,7 +40,7 @@
             :style="{
               transform:
                 currentIndex22 == index
-                  ? 'translateY(-10px)'
+                  ? 'translateY(-30px)'
                   : 'translateY(0px)',
             }"
           >
@@ -63,7 +63,6 @@
                   <span
                     v-show="currentIndex23 == index"
                     style="
-                      color: #33d9b2 !important;
                       font-weight: bold !important;
                       cursor: pointer;
                     "
@@ -240,9 +239,10 @@
             <div class="productSwiper point" @mouseover="handleover4(index)">
               <img :src="item.pic" alt="" />
               <div class="mask"></div>
-              <div class="showbox1"
+              <div
+                class="showbox1"
                 :style="{
-                opacity:  currentIndex41 != index?1:0
+                  opacity: currentIndex41 != index ? 1 : 0,
                 }"
               >
                 <div class="title">{{ item.title }}</div>
@@ -381,12 +381,17 @@
                   </div>
                   <div class="time">
                     <span>{{ item.time }}</span>
-                    <div class="read"
-                    @mouseover="currentIndex6=index"
-                    @mouseleave="currentIndex6=-1"
+                    <div
+                      class="read"
+                      @mouseover="currentIndex6 = index"
+                      @mouseleave="currentIndex6 = -1"
                     >
-                      <span v-show="currentIndex6!=index">{{ item.read }}</span>
-                      <span v-show="currentIndex6==index">{{ item.read }}></span>
+                      <span v-show="currentIndex6 != index">{{
+                        item.read
+                      }}</span>
+                      <span v-show="currentIndex6 == index"
+                        >{{ item.read }}></span
+                      >
                     </div>
                   </div>
                 </li>
@@ -475,8 +480,7 @@
       </div>
     </div>
     <div class="bg7" :style="{ width: bWidth + 'px' }">
-      <div class="content7" :style="{ width: width + 'px' }">
-        </div>
+      <div class="content7" :style="{ width: width + 'px' }"></div>
     </div>
   </div>
 </template>
@@ -503,7 +507,7 @@ export default {
       flag4: false,
       currentIndex41: 0, //显示详情
       currentIndex42: -1, //显示按钮选中
-      currentIndex6:-1, //显示详情按钮选中
+      currentIndex6: -1, //显示详情按钮选中
       flag5: false,
       flag6: false,
       //模块二列表
@@ -654,7 +658,7 @@ export default {
   },
   computed: {
     ...mapState({
-       bWidth: (state) => state.cart.bWidth, //此处注意需要区分模块(cart)，不能少 .cart.
+      bWidth: (state) => state.cart.bWidth, //此处注意需要区分模块(cart)，不能少 .cart.
       width: (state) => state.cart.width,
     }),
   },
@@ -781,7 +785,9 @@ export default {
   .bg2 {
     background: url(~/assets/img/home/bg2.png);
     background-repeat: no-repeat;
-    background-size: 100% 578px;
+    // background-size: 100% 578px;
+    background-size: cover;
+    background-position: top;
     height: 578px;
     .content2 {
       margin: 0 auto;
@@ -794,15 +800,15 @@ export default {
       }
       .swiper {
         position: absolute;
-        top: 210px;
+        top: 190px;
         width: 100%;
         // overflow: hidden;
         // overflow-y: visible;
         // overflow-x: hidden;
         padding: 0 25px;
-        padding-top: 20px;
+        padding-top: 30px;
         box-sizing: border-box;
-        height: 305px;
+        height: 325px;
         .swiper-slide {
           // margin: 0 2% !important;
           width: 25% !important;
@@ -868,57 +874,10 @@ export default {
       }
     }
   }
-  .text {
-    font-size: 100px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.08);
-    line-height: 210px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .solution {
-      position: absolute;
-      top: 110px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .line1 {
-        font-size: 48px;
-        font-weight: bold;
-        color: #ffffff;
-        line-height: 68px;
-      }
-      .line2 {
-        font-size: 14px;
-        font-weight: 400;
-        color: #ffffff;
-        line-height: 8px;
-        opacity: 0.7;
-      }
-      .line3 {
-        font-size: 18px;
-        font-weight: 400;
-        color: #ffffff;
-        line-height: 70px;
-      }
-      .btn21 {
-        width: 122px;
-        height: 38px;
-        background: #ffffff;
-        border-radius: 18px;
-        font-size: 14px;
-        font-weight: 400;
-        color: #606060;
-        line-height: 38px;
-        text-align: center;
-      }
-    }
-  }
   .bg3 {
     background: url(~/assets/img/home/bg3.png) no-repeat center center;
     background-size: cover;
+    // background-size: 100% 1136px;
     height: 1136px;
     .content3 {
       margin: 0 auto;
@@ -1341,7 +1300,7 @@ export default {
               }
             }
 
-            &{
+            & {
               dt:hover {
                 color: #05ad49;
               }
